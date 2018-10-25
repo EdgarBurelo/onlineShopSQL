@@ -75,7 +75,7 @@ function qtyClient(item) {
         }
     ]).then(function(response) {
         if(item[0].stock_quantity < response.productQty){
-            console.log("There is not enogh Product, The order cannot go through");
+            console.log("There is not enogh Product, The order cannot go through!");
         } else {
             console.log("-------------------------------\nYour order has benn placed\nThe total of your purchase is: $"+response.productQty*item[0].price +" USD\n------------------------------------");
             const resultQty = item[0].stock_quantity - response.productQty;
