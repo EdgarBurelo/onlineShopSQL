@@ -46,7 +46,7 @@ function showOptions() {
                 queryThird()
                 break;
             case "Add New Product":
-                //function
+                fourth()
                 break;
             default:
                 console.log("somethingWrong Happened.");
@@ -136,3 +136,31 @@ function queryThird() {
         third(res);
     });
 };
+
+function fourth() {
+    inquirer.prompt([
+        {
+            type:"input",
+            name:"ProdName",
+            message:"Type the product name"
+        },
+        {
+            type:"input",
+            name:"DeptName",
+            message:"Type the Department name"
+        },
+        {
+            type:"input",
+            name:"price",
+            message:"Type the Price of the product"
+        },
+        {
+            type:"input",
+            name:"qty",
+            message:"Type the stock quantity"
+        }
+    ]).then(function(response) {
+        console.log(response.ProdName,response.DeptName,response.price,response.qty);
+        connection.end();
+    });
+}
