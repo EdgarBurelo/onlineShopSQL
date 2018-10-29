@@ -161,6 +161,22 @@ function fourth() {
         }
     ]).then(function(response) {
         console.log(response.ProdName,response.DeptName,response.price,response.qty);
+        let regex = /^\d+$/;
+        if(regex.test(response.price) && regex.test(response.qty)){
+            connection.query("INSERT INTO products SET ?",
+            {
+                product_name: response.ProdName,
+                department_name: response.DeptName,
+                price: response.price,
+                stock_quantity: response.qty
+            },
+            function(err,res){
+                if (err) throw err;
+                console.log(res.affectedRows + " product inserted!\n");
+            });
+        } else {
+            console.log("Make sure the price and the quantity are numbers");
+        }
         connection.end();
     });
 }
