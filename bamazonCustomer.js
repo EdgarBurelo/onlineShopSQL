@@ -79,10 +79,12 @@ function qtyClient(item) {
         } else {
             console.log("-------------------------------\nYour order has benn placed\nThe total of your purchase is: $"+response.productQty*item[0].price +" USD\n------------------------------------");
             const resultQty = item[0].stock_quantity - response.productQty;
+            const moneyTot = item[0].product_sales + (response.productQty * item[0].price);
             connection.query("UPDATE products SET ? WHERE ?",
             [
                 {
-                    stock_quantity: resultQty
+                    stock_quantity: resultQty,
+                    product_sales: moneyTot
                 },
                 {
                     item_id: item[0].item_id

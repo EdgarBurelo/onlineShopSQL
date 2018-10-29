@@ -51,3 +51,45 @@ VALUES
 
 SELECT *
 FROM products;
+
+
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("1", "Accesorios", 30000);
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("2", "Electronicos", 20000);
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("3", "Electrodomesticos", 3200);
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("4", "Deportes", 400);
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("5", "Musica", 10);
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("6", "Cocina", 1);
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("7", "Dulceria", 0.1);
+
+INSERT INTO departments
+    (department_id, department_name, over_head_costs)
+VALUES
+    ("8", "Casual", 20);
