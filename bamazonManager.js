@@ -160,7 +160,7 @@ function fourth() {
             message:"Type the stock quantity"
         }
     ]).then(function(response) {
-        console.log(response.ProdName,response.DeptName,response.price,response.qty);
+        //console.log(response.ProdName,response.DeptName,response.price,response.qty);
         let regex = /^\d+$/;
         if(regex.test(response.price) && regex.test(response.qty)){
             connection.query("INSERT INTO products SET ?",
