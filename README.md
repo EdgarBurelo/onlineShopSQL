@@ -45,3 +45,21 @@ In the "Add to Inventory" Option the Manager will need to select the product and
 
 For the "Add new Product" option the manager will need to input the name, department, Price and Qty for the product he is adding, it is very important that the price and qty are numbers, if no the product it will no be added.
 ![Manager3](./Img/M6.png)
+
+
+## Online Shop Supervisor
+
+For the Supervisor there is the "bamazonSupervisor.js" file which will help him with 2 different options: View Product Sales by Department and Create New Department.
+
+When the Supervisor executes the "node bamazonSupervisor.js" there will be prompted the two option to select:
+![Super](./Img/S1.png)
+
+### View Product Sales by Department
+
+When the "View Products for Sale" is selected a table will be displayed with 5 different columns: department_id, department_name, over_head_costs, product_sales and total_profit.
+![Super2](./Img/S2.png)
+
+### Create New Department
+
+When the "Create New Department" is selected the supervisor will need to introduce the id, name and cost for the department and the talbe will be updated.
+![Super3](./Img/S3.png)
